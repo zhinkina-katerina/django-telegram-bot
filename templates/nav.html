@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+    <div class="container-fluid">
+        <nav class="my-2">
+            {% if user.is_authenticated %}
+            Hello, {{ user.username }}.
+            <a class="p-2 text-muted" href="{% url 'password_change' %}">Change password</a>
+            <a class="p-2 text-muted" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class="p-2 text-muted" href="{% url 'login' %}">Login</a>
+            {% endif %}
+        </nav>
+    </div>
+</nav>
