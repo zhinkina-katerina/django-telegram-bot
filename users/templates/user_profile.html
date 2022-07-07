@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+    <table class="table">
+  <tbody>
+    <tr>
+      <th scope="row">Telegram name</th>
+      <td>{{ user.telegram_fullname }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Telegram username</th>
+      <td>{{ user.telegram_username }}</td>
+    </tr>
+      <tr>
+      <th scope="row">Telegram user_id</th>
+      <td>{{ user.telegram_user_id }}</td>
+    </tr>
+  </tbody>
+</table>
+    <a target="_blank" href="https://t.me/{{ user.telegram_username }}" class="btn btn-primary mt-2">Telegram account</a>
+</div>
+
+
+
+{% endblock content %}
